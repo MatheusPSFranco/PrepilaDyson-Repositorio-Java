@@ -6,6 +6,13 @@ public class RelatorioOperacao {
     private RelatorioAnalitico relatorioAnalitico;
     private OperacaoSBSP operacaoSBSP;
 
+    //Construtores
+    public RelatorioOperacao(int idRelatorioOperacao, RelatorioAnalitico relatorioAnalitico, OperacaoSBSP operacaoSBSP) {
+        this.idRelatorioOperacao = idRelatorioOperacao;
+        this.relatorioAnalitico = relatorioAnalitico;
+        this.operacaoSBSP = operacaoSBSP;
+    }
+
     //Getter and Setter
     public int getIdRelatorioOperacao() {
         return idRelatorioOperacao;

@@ -15,6 +15,20 @@ public class Satelite {
     private LocalDateTime data_cadastro;
     private Organizacao organizacao;
 
+    //Construtores
+    public Satelite(int idSatelite, String nome, String codigoSatelite, String status, LocalDateTime data_lancamento, String observacao, double altitudeOrbital, String fabricante, LocalDateTime data_cadastro, Organizacao organizacao) {
+        this.idSatelite = idSatelite;
+        this.nome = nome;
+        this.codigoSatelite = codigoSatelite;
+        this.status = status;
+        this.data_lancamento = data_lancamento;
+        this.observacao = observacao;
+        this.altitudeOrbital = altitudeOrbital;
+        this.fabricante = fabricante;
+        this.data_cadastro = data_cadastro;
+        this.organizacao = organizacao;
+    }
+
     //Getter and Setter
     public int getIdSatelite() {
         return idSatelite;

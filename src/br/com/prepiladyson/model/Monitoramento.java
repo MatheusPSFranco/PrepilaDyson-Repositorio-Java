@@ -14,6 +14,19 @@ public class Monitoramento {
     private String observacao;
     private OperacaoSBSP operacaoSBSP;
 
+    //Construtores
+    public Monitoramento(int idMovimento, LocalDateTime dataHoraColeta, double energiaCaptada, double energiaTransmitida, double energiaRecebida, double eficiencia_percentual, String status, String observacao, OperacaoSBSP operacaoSBSP) {
+        this.idMovimento = idMovimento;
+        this.dataHoraColeta = dataHoraColeta;
+        this.energiaCaptada = energiaCaptada;
+        this.energiaTransmitida = energiaTransmitida;
+        this.energiaRecebida = energiaRecebida;
+        this.eficiencia_percentual = eficiencia_percentual;
+        this.status = status;
+        this.observacao = observacao;
+        this.operacaoSBSP = operacaoSBSP;
+    }
+
     //Getter and Setter
     public int getIdMovimento() {
         return idMovimento;

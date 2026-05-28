@@ -12,6 +12,17 @@ public class Organizacao {
     private LocalDateTime dataCadastro;
     private String status;
 
+    //Construtores
+    public Organizacao(int idOrganizacao, String nome, String cnpj, String tipoOrganizacao, String pais, LocalDateTime dataCadastro, String status) {
+        this.idOrganizacao = idOrganizacao;
+        this.nome = nome;
+        this.cnpj = cnpj;
+        this.tipoOrganizacao = tipoOrganizacao;
+        this.pais = pais;
+        this.dataCadastro = dataCadastro;
+        this.status = status;
+    }
+
     //Getter and Setter
     public int getIdOrganizacao() {
         return idOrganizacao;

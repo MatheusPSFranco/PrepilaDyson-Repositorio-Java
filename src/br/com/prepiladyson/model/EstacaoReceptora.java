@@ -13,6 +13,18 @@ public class EstacaoReceptora {
     private Organizacao organizacao;
     private double capacidadeRecepcao;
 
+    //Construtores
+    public EstacaoReceptora(int idEstacao, String nome, String localizacao, String status, LocalDateTime dataCadastro, String observacao, Organizacao organizacao, double capacidadeRecepcao) {
+        this.idEstacao = idEstacao;
+        this.nome = nome;
+        this.localizacao = localizacao;
+        this.status = status;
+        this.dataCadastro = dataCadastro;
+        this.observacao = observacao;
+        this.organizacao = organizacao;
+        this.capacidadeRecepcao = capacidadeRecepcao;
+    }
+
     //Getter and Setter
     public int getIdEstacao() {
         return idEstacao;

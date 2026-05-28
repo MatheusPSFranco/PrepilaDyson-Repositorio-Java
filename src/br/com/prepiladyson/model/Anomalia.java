@@ -13,6 +13,18 @@ public class Anomalia {
     private Monitoramento monitoramento;
     private String descricaoResolucao;
 
+    //Construtores
+    public Anomalia(int idAnomalia, String tipoAnomalia, String descricao, String severidade, LocalDateTime dataHoraDetectada, String status, Monitoramento monitoramento, String descricaoResolucao) {
+        this.idAnomalia = idAnomalia;
+        this.tipoAnomalia = tipoAnomalia;
+        this.descricao = descricao;
+        this.severidade = severidade;
+        this.dataHoraDetectada = dataHoraDetectada;
+        this.status = status;
+        this.monitoramento = monitoramento;
+        this.descricaoResolucao = descricaoResolucao;
+    }
+
     //Getter and Setter
     public int getIdAnomalia() {
         return idAnomalia;

@@ -10,6 +10,15 @@ public class EstacaoOperacao {
     private LocalDateTime dataVinculo;
     private String statusVinculo;
 
+    //Construtores
+    public EstacaoOperacao(int idEstacaoOperacao, EstacaoReceptora estacaoReceptora, OperacaoSBSP operacaoSBSP, LocalDateTime dataVinculo, String statusVinculo) {
+        this.idEstacaoOperacao = idEstacaoOperacao;
+        this.estacaoReceptora = estacaoReceptora;
+        this.operacaoSBSP = operacaoSBSP;
+        this.dataVinculo = dataVinculo;
+        this.statusVinculo = statusVinculo;
+    }
+
     //Getter and Setter
     public int getIdEstacaoOperacao() {
         return idEstacaoOperacao;

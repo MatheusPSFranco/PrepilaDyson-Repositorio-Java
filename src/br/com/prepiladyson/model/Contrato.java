@@ -12,6 +12,17 @@ public class Contrato {
     private LocalDateTime dataCadastro;
     private Organizacao organizacao;
 
+    //Construtores
+    public Contrato(int idContrato, String modalidade, LocalDateTime dataInicio, LocalDateTime dataFim, String status, LocalDateTime dataCadastro, Organizacao organizacao) {
+        this.idContrato = idContrato;
+        this.modalidade = modalidade;
+        this.dataInicio = dataInicio;
+        this.dataFim = dataFim;
+        this.status = status;
+        this.dataCadastro = dataCadastro;
+        this.organizacao = organizacao;
+    }
+
     //Getter and Setter
     public int getIdContrato() {
         return idContrato;

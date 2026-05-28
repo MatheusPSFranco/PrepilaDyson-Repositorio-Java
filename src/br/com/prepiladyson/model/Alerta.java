@@ -12,6 +12,17 @@ public class Alerta {
     private Anomalia anomalia;
     private Usuario usuario;
 
+    //Construtores
+    public Alerta(int idAlerta, LocalDateTime dataHoraGeracao, String prioridade, String status, LocalDateTime dataHoraLeitura, Anomalia anomalia, Usuario usuario) {
+        this.idAlerta = idAlerta;
+        this.dataHoraGeracao = dataHoraGeracao;
+        this.prioridade = prioridade;
+        this.status = status;
+        this.dataHoraLeitura = dataHoraLeitura;
+        this.anomalia = anomalia;
+        this.usuario = usuario;
+    }
+
     //Getter and Setter
     public int getIdAlerta() {
         return idAlerta;

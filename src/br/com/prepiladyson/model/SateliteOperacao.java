@@ -10,6 +10,15 @@ public class SateliteOperacao {
     private LocalDateTime dataVinculo;
     private String statusParticipacao;
 
+    //Construtores
+    public SateliteOperacao(int idSateliteOperacao, Satelite satelite, OperacaoSBSP operacaoSBSP, LocalDateTime dataVinculo, String statusParticipacao) {
+        this.idSateliteOperacao = idSateliteOperacao;
+        this.satelite = satelite;
+        this.operacaoSBSP = operacaoSBSP;
+        this.dataVinculo = dataVinculo;
+        this.statusParticipacao = statusParticipacao;
+    }
+
     //Getter and Setter
     public int getIdSateliteOperacao() {
         return idSateliteOperacao;

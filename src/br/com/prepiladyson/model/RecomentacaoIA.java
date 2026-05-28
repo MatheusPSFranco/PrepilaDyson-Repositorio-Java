@@ -13,6 +13,18 @@ public class RecomentacaoIA {
     private OperacaoSBSP operacaoSBSP;
     private Anomalia anomalia;
 
+    //Construtores
+    public RecomentacaoIA(int idRecomendacao, LocalDateTime dataHoraGeracao, String recomendacao, String status, String justificativa_descarte, LocalDateTime dataHoraAlteracao, OperacaoSBSP operacaoSBSP, Anomalia anomalia) {
+        this.idRecomendacao = idRecomendacao;
+        this.dataHoraGeracao = dataHoraGeracao;
+        this.recomendacao = recomendacao;
+        this.status = status;
+        this.justificativa_descarte = justificativa_descarte;
+        this.dataHoraAlteracao = dataHoraAlteracao;
+        this.operacaoSBSP = operacaoSBSP;
+        this.anomalia = anomalia;
+    }
+
     //Getter and Setter
     public int getIdRecomendacao() {
         return idRecomendacao;

@@ -16,6 +16,21 @@ public class RelatorioAnalitico {
     private Usuario usuario;
     private String periodoReferencia;
 
+    //Construtores
+    public RelatorioAnalitico(int idRelatorio, LocalDateTime dataInicioPeriodo, LocalDateTime dataFimPeriodo, String titulo, String tipoRelatorio, String conteudo, String status, LocalDateTime dataGeracao, Organizacao organizacao, Usuario usuario, String periodoReferencia) {
+        this.idRelatorio = idRelatorio;
+        this.dataInicioPeriodo = dataInicioPeriodo;
+        this.dataFimPeriodo = dataFimPeriodo;
+        this.titulo = titulo;
+        this.tipoRelatorio = tipoRelatorio;
+        this.conteudo = conteudo;
+        this.status = status;
+        this.dataGeracao = dataGeracao;
+        this.organizacao = organizacao;
+        this.usuario = usuario;
+        this.periodoReferencia = periodoReferencia;
+    }
+
     //Getter and Setter
     public int getIdRelatorio() {
         return idRelatorio;

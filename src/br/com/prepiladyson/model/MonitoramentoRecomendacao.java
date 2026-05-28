@@ -10,6 +10,15 @@ public class MonitoramentoRecomendacao {
     private LocalDateTime dataVinculo;
     private String origemAnalise;
 
+    //Construtores
+    public MonitoramentoRecomendacao(int idMonitoramentoRecomendacao, Monitoramento monitoramento, RecomentacaoIA recomentacaoIA, LocalDateTime dataVinculo, String origemAnalise) {
+        this.idMonitoramentoRecomendacao = idMonitoramentoRecomendacao;
+        this.monitoramento = monitoramento;
+        this.recomentacaoIA = recomentacaoIA;
+        this.dataVinculo = dataVinculo;
+        this.origemAnalise = origemAnalise;
+    }
+
     //Getter and Setter
     public int getIdMonitoramentoRecomendacao() {
         return idMonitoramentoRecomendacao;

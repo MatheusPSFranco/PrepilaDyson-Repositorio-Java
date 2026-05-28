@@ -16,6 +16,21 @@ public class OperacaoSBSP {
     private Organizacao organizacao;
     private Usuario usuario;
 
+    //Construtores
+    public OperacaoSBSP(int idOperacao, String nomeOperacao, String descricao, LocalDateTime dataInicioPlanejada, LocalDateTime dataFimPlanejada, LocalDateTime dataInicioReal, LocalDateTime dataFimReal, String status, LocalDateTime dataCadastro, Organizacao organizacao, Usuario usuario) {
+        this.idOperacao = idOperacao;
+        this.nomeOperacao = nomeOperacao;
+        this.descricao = descricao;
+        this.dataInicioPlanejada = dataInicioPlanejada;
+        this.dataFimPlanejada = dataFimPlanejada;
+        this.dataInicioReal = dataInicioReal;
+        this.dataFimReal = dataFimReal;
+        this.status = status;
+        this.dataCadastro = dataCadastro;
+        this.organizacao = organizacao;
+        this.usuario = usuario;
+    }
+
     //Getter and Setter
     public int getIdOperacao() {
         return idOperacao;

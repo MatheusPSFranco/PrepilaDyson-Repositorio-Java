@@ -13,6 +13,18 @@ public class Usuario {
     private String status;
     private Organizacao organizacao;
 
+    //Construtores
+    public Usuario(int idUsuario, String nomeCompleto, String email, String senha, String perfilAcesso, LocalDateTime dataCadastro, String status, Organizacao organizacao) {
+        this.idUsuario = idUsuario;
+        this.nomeCompleto = nomeCompleto;
+        this.email = email;
+        this.senha = senha;
+        this.perfilAcesso = perfilAcesso;
+        this.dataCadastro = dataCadastro;
+        this.status = status;
+        this.organizacao = organizacao;
+    }
+
     //Getter and Setter
     public int getIdUsuario() {
         return idUsuario;
