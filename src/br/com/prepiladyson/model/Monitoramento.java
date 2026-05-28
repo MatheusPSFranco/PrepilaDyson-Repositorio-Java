@@ -105,4 +105,13 @@ public class Monitoramento {
     public String toString(){
         return "Energia captada: " + energiaCaptada + ", energia transmitida: " + energiaTransmitida;
     }
+
+    //metodos
+    public double calcularPerdaEnergetica() {
+        return energiaCaptada - energiaTransmitida;
+    }
+
+    public double calcularTaxaEficiencia() {
+        return (energiaTransmitida * 100) / energiaCaptada;
+    }
 }

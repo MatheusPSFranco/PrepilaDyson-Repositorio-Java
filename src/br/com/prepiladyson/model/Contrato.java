@@ -85,4 +85,10 @@ public class Contrato {
     public String toString(){
         return organizacao.getNome() + " tem um contrato " + modalidade + " que atualmente está " + status;
     }
+
+    //metodos
+    public void renovarContrato(LocalDateTime novaDataFim) {
+        dataFim = novaDataFim;
+        status = "ATIVO";
+    }
 }

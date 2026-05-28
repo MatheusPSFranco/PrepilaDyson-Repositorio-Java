@@ -115,4 +115,9 @@ public class Satelite {
     public String toString(){
         return "Satelite " + nome + " codigo " + codigoSatelite;
     }
+
+    //metodos
+    public void entrarManutencao() {
+        status = "MANUTENCAO";
+    }
 }

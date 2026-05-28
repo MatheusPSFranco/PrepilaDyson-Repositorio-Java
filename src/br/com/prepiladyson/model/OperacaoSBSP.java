@@ -125,4 +125,15 @@ public class OperacaoSBSP {
     public String toString(){
         return "Operação: " + nomeOperacao + " " + descricao;
     }
+
+    //metodos
+    public void iniciarOperacao() {
+        status = "ATIVA";
+        dataInicioReal = LocalDateTime.now();
+    }
+
+    public void finalizarOperacao() {
+        status = "FINALIZADA";
+        dataFimReal = LocalDateTime.now();
+    }
 }

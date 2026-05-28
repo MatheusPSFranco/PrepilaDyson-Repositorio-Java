@@ -95,4 +95,14 @@ public class Usuario {
     public String toString(){
         return nomeCompleto + ", email: " + email + ", possui cargo: " + perfilAcesso;
     }
+
+    //metodos
+    public void alterarPerfilAcesso(String novoPerfil) {
+        perfilAcesso = novoPerfil;
+    }
+
+    public void redefinirSenha(String novaSenha) {
+        senha = novaSenha;
+    }
+
 }

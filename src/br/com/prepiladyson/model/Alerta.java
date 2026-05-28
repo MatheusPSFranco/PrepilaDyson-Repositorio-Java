@@ -85,4 +85,11 @@ public class Alerta {
     public String toString(){
         return "Alerta " + prioridade + " " + status;
     }
+
+    //metodos
+    //Para caso do usuario demorar pra ver e ser um alerta importante
+    public void direcionarUsuario(Usuario usuario) {
+
+        this.usuario = usuario;
+    }
 }
