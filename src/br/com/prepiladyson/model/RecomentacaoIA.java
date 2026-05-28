@@ -89,4 +89,10 @@ public class RecomentacaoIA {
     public void setAnomalia(Anomalia anomalia) {
         this.anomalia = anomalia;
     }
+
+    //toString()
+    @Override
+    public String toString(){
+        return recomendacao + ", " + status;
+    }
 }

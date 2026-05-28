@@ -79,4 +79,10 @@ public class Contrato {
     public void setOrganizacao(Organizacao organizacao) {
         this.organizacao = organizacao;
     }
+
+    //toString()
+    @Override
+    public String toString(){
+        return organizacao.getNome() + " tem um contrato " + modalidade + " que atualmente está " + status;
+    }
 }

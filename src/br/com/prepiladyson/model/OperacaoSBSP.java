@@ -119,4 +119,10 @@ public class OperacaoSBSP {
     public void setUsuario(Usuario usuario) {
         this.usuario = usuario;
     }
+
+    //toString()
+    @Override
+    public String toString(){
+        return "Operação: " + nomeOperacao + " " + descricao;
+    }
 }

@@ -89,4 +89,10 @@ public class EstacaoReceptora {
     public void setCapacidadeRecepcao(double capacidadeRecepcao) {
         this.capacidadeRecepcao = capacidadeRecepcao;
     }
+
+    //toString()
+    @Override
+    public String toString(){
+        return "Estação Receptora " + nome + " da " + organizacao.getNome() + " localizada em " + localizacao;
+    }
 }

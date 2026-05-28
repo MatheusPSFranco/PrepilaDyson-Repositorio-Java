@@ -89,4 +89,10 @@ public class Usuario {
     public void setOrganizacao(Organizacao organizacao) {
         this.organizacao = organizacao;
     }
+
+    //toString()
+    @Override
+    public String toString(){
+        return nomeCompleto + ", email: " + email + ", possui cargo: " + perfilAcesso;
+    }
 }

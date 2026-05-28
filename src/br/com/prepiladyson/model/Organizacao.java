@@ -79,4 +79,10 @@ public class Organizacao {
     public void setStatus(String status) {
         this.status = status;
     }
+
+    //toString()
+    @Override
+    public String toString(){
+        return nome + " " + tipoOrganizacao + " localizada em " + pais;
+    }
 }

@@ -99,4 +99,10 @@ public class Monitoramento {
     public void setOperacaoSBSP(OperacaoSBSP operacaoSBSP) {
         this.operacaoSBSP = operacaoSBSP;
     }
+
+    //toString()
+    @Override
+    public String toString(){
+        return "Energia captada: " + energiaCaptada + ", energia transmitida: " + energiaTransmitida;
+    }
 }

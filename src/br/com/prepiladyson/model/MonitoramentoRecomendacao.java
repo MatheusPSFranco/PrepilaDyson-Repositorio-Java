@@ -59,4 +59,10 @@ public class MonitoramentoRecomendacao {
     public void setOrigemAnalise(String origemAnalise) {
         this.origemAnalise = origemAnalise;
     }
+
+    //toString()
+    @Override
+    public String toString(){
+        return "Monitoramento "+monitoramento.getIdMovimento() + " recomendou o uso da IA em " + recomentacaoIA.getRecomendacao();
+    }
 }

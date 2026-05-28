@@ -59,4 +59,10 @@ public class SateliteOperacao {
     public void setStatusParticipacao(String statusParticipacao) {
         this.statusParticipacao = statusParticipacao;
     }
+
+    //toString()
+    @Override
+    public String toString(){
+        return "Satelite " + satelite + " participa da operação " + operacaoSBSP;
+    }
 }

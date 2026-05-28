@@ -79,4 +79,10 @@ public class Alerta {
     public void setUsuario(Usuario usuario) {
         this.usuario = usuario;
     }
+
+    //toString()
+    @Override
+    public String toString(){
+        return "Alerta " + prioridade + " " + status;
+    }
 }

@@ -37,4 +37,10 @@ public class RelatorioOperacao {
     public void setOperacaoSBSP(OperacaoSBSP operacaoSBSP) {
         this.operacaoSBSP = operacaoSBSP;
     }
+
+    //toString()
+    @Override
+    public String toString(){
+        return relatorioAnalitico.getTitulo() + " da operação " + operacaoSBSP;
+    }
 }

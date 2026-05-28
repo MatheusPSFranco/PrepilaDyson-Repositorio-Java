@@ -109,4 +109,10 @@ public class Satelite {
     public void setOrganizacao(Organizacao organizacao) {
         this.organizacao = organizacao;
     }
+
+    //toString()
+    @Override
+    public String toString(){
+        return "Satelite " + nome + " codigo " + codigoSatelite;
+    }
 }

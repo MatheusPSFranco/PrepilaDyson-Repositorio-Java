@@ -119,4 +119,10 @@ public class RelatorioAnalitico {
     public void setPeriodoReferencia(String periodoReferencia) {
         this.periodoReferencia = periodoReferencia;
     }
+
+    //toString()
+    @Override
+    public String toString(){
+        return titulo + " " + conteudo;
+    }
 }

@@ -89,4 +89,10 @@ public class Anomalia {
     public void setDescricaoResolucao(String descricaoResolucao) {
         this.descricaoResolucao = descricaoResolucao;
     }
+
+    //toString()
+    @Override
+    public String toString(){
+        return tipoAnomalia + " de importancia " + severidade + ", descrição: " + descricao;
+    }
 }

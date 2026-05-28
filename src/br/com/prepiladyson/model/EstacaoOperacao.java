@@ -59,4 +59,10 @@ public class EstacaoOperacao {
     public void setStatusVinculo(String statusVinculo) {
         this.statusVinculo = statusVinculo;
     }
+
+    //toString()
+    @Override
+    public String toString(){
+        return "Estação receptora " + estacaoReceptora.getNome() + " está vinculada com a operação " + operacaoSBSP.getNomeOperacao();
+    }
 }
