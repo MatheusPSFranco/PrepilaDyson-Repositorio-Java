@@ -4,7 +4,7 @@ import java.time.LocalDateTime;
 
 public class Monitoramento {
 
-    private int idMovimento;
+    private int idMonitoramento;
     private LocalDateTime dataHoraColeta;
     private double energiaCaptada;
     private double energiaTransmitida;
@@ -15,25 +15,24 @@ public class Monitoramento {
     private OperacaoSBSP operacaoSBSP;
 
     //Construtores
-    public Monitoramento(int idMovimento, LocalDateTime dataHoraColeta, double energiaCaptada, double energiaTransmitida, double energiaRecebida, double eficiencia_percentual, String status, String observacao, OperacaoSBSP operacaoSBSP) {
-        this.idMovimento = idMovimento;
+    public Monitoramento(int idMonitoramento, LocalDateTime dataHoraColeta, double energiaCaptada, double energiaTransmitida, double energiaRecebida, String status, String observacao, OperacaoSBSP operacaoSBSP) {
+        this.idMonitoramento = idMonitoramento;
         this.dataHoraColeta = dataHoraColeta;
         this.energiaCaptada = energiaCaptada;
         this.energiaTransmitida = energiaTransmitida;
         this.energiaRecebida = energiaRecebida;
-        this.eficiencia_percentual = eficiencia_percentual;
         this.status = status;
         this.observacao = observacao;
         this.operacaoSBSP = operacaoSBSP;
     }
 
     //Getter and Setter
-    public int getIdMovimento() {
-        return idMovimento;
+    public int getidMonitoramento() {
+        return idMonitoramento;
     }
 
-    public void setIdMovimento(int idMovimento) {
-        this.idMovimento = idMovimento;
+    public void setidMonitoramento(int idMonitoramento) {
+        this.idMonitoramento = idMonitoramento;
     }
 
     public LocalDateTime getDataHoraColeta() {

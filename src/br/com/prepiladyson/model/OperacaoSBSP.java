@@ -31,6 +31,18 @@ public class OperacaoSBSP {
         this.usuario = usuario;
     }
 
+    public OperacaoSBSP(int idOperacao, String nomeOperacao, String descricao, LocalDateTime dataInicioPlanejada, LocalDateTime dataFimPlanejada, String status, LocalDateTime dataCadastro, Organizacao organizacao, Usuario usuario) {
+        this.idOperacao = idOperacao;
+        this.nomeOperacao = nomeOperacao;
+        this.descricao = descricao;
+        this.dataInicioPlanejada = dataInicioPlanejada;
+        this.dataFimPlanejada = dataFimPlanejada;
+        this.status = status;
+        this.dataCadastro = dataCadastro;
+        this.organizacao = organizacao;
+        this.usuario = usuario;
+    }
+
     //Getter and Setter
     public int getIdOperacao() {
         return idOperacao;
@@ -128,12 +140,12 @@ public class OperacaoSBSP {
 
     //metodos
     public void iniciarOperacao() {
-        status = "ATIVA";
+        status = "ativa";
         dataInicioReal = LocalDateTime.now();
     }
 
     public void finalizarOperacao() {
-        status = "FINALIZADA";
+        status = "finalizada";
         dataFimReal = LocalDateTime.now();
     }
 }

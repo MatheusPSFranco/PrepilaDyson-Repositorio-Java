@@ -8,24 +8,24 @@ public class Satelite {
     private String nome;
     private String codigoSatelite;
     private String status;
-    private LocalDateTime data_lancamento;
+    private LocalDateTime dataLancamento;
     private String observacao;
     private double altitudeOrbital;
     private String fabricante;
-    private LocalDateTime data_cadastro;
+    private LocalDateTime dataCadastro;
     private Organizacao organizacao;
 
     //Construtores
-    public Satelite(int idSatelite, String nome, String codigoSatelite, String status, LocalDateTime data_lancamento, String observacao, double altitudeOrbital, String fabricante, LocalDateTime data_cadastro, Organizacao organizacao) {
+    public Satelite(int idSatelite, String nome, String codigoSatelite, String status, LocalDateTime dataLancamento, String observacao, double altitudeOrbital, String fabricante, LocalDateTime dataCadastro, Organizacao organizacao) {
         this.idSatelite = idSatelite;
         this.nome = nome;
         this.codigoSatelite = codigoSatelite;
         this.status = status;
-        this.data_lancamento = data_lancamento;
+        this.dataLancamento = dataLancamento;
         this.observacao = observacao;
         this.altitudeOrbital = altitudeOrbital;
         this.fabricante = fabricante;
-        this.data_cadastro = data_cadastro;
+        this.dataCadastro = dataCadastro;
         this.organizacao = organizacao;
     }
 
@@ -62,12 +62,12 @@ public class Satelite {
         this.status = status;
     }
 
-    public LocalDateTime getData_lancamento() {
-        return data_lancamento;
+    public LocalDateTime getdataLancamento() {
+        return dataLancamento;
     }
 
-    public void setData_lancamento(LocalDateTime data_lancamento) {
-        this.data_lancamento = data_lancamento;
+    public void setdataLancamento(LocalDateTime dataLancamento) {
+        this.dataLancamento = dataLancamento;
     }
 
     public String getObservacao() {
@@ -94,12 +94,12 @@ public class Satelite {
         this.fabricante = fabricante;
     }
 
-    public LocalDateTime getData_cadastro() {
-        return data_cadastro;
+    public LocalDateTime getdataCadastro() {
+        return dataCadastro;
     }
 
-    public void setData_cadastro(LocalDateTime data_cadastro) {
-        this.data_cadastro = data_cadastro;
+    public void setdataCadastro(LocalDateTime dataCadastro) {
+        this.dataCadastro = dataCadastro;
     }
 
     public Organizacao getOrganizacao() {
@@ -118,6 +118,6 @@ public class Satelite {
 
     //metodos
     public void entrarManutencao() {
-        status = "MANUTENCAO";
+        status = "em manutencao";
     }
 }

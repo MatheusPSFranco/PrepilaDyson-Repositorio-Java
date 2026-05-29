@@ -13,12 +13,11 @@ public class Alerta {
     private Usuario usuario;
 
     //Construtores
-    public Alerta(int idAlerta, LocalDateTime dataHoraGeracao, String prioridade, String status, LocalDateTime dataHoraLeitura, Anomalia anomalia, Usuario usuario) {
+    public Alerta(int idAlerta, LocalDateTime dataHoraGeracao, String prioridade, String status, Anomalia anomalia, Usuario usuario) {
         this.idAlerta = idAlerta;
         this.dataHoraGeracao = dataHoraGeracao;
         this.prioridade = prioridade;
         this.status = status;
-        this.dataHoraLeitura = dataHoraLeitura;
         this.anomalia = anomalia;
         this.usuario = usuario;
     }

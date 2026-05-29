@@ -63,6 +63,6 @@ public class MonitoramentoRecomendacao {
     //toString()
     @Override
     public String toString(){
-        return "Monitoramento "+monitoramento.getIdMovimento() + " recomendou o uso da IA em " + recomentacaoIA.getRecomendacao();
+        return "Monitoramento "+monitoramento.getidMonitoramento() + " recomendou o uso da IA em " + recomentacaoIA.getRecomendacao();
     }
 }
