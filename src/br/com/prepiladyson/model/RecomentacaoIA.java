@@ -8,7 +8,7 @@ public class RecomentacaoIA {
     private LocalDateTime dataHoraGeracao;
     private String recomendacao;
     private String status;
-    private String justificativa_descarte;
+    private String justificativaDescarte;
     private LocalDateTime dataHoraAlteracao;
     private OperacaoSBSP operacaoSBSP;
     private Anomalia anomalia;
@@ -56,12 +56,12 @@ public class RecomentacaoIA {
         this.status = status;
     }
 
-    public String getJustificativa_descarte() {
-        return justificativa_descarte;
+    public String getjustificativaDescarte() {
+        return justificativaDescarte;
     }
 
-    public void setJustificativa_descarte(String justificativa_descarte) {
-        this.justificativa_descarte = justificativa_descarte;
+    public void setjustificativaDescarte(String justificativaDescarte) {
+        this.justificativaDescarte = justificativaDescarte;
     }
 
     public LocalDateTime getDataHoraAlteracao() {
@@ -92,5 +92,12 @@ public class RecomentacaoIA {
     @Override
     public String toString(){
         return recomendacao + ", " + status;
+    }
+    
+    //metodos
+    public void adicionarJustificativaDescarte(String novaJustificativa) {
+
+        justificativaDescarte = novaJustificativa;
+        dataHoraAlteracao = LocalDateTime.now();
     }
 }

@@ -91,4 +91,9 @@ public class Alerta {
 
         this.usuario = usuario;
     }
+
+    public void registrarLeitura() {
+
+        dataHoraLeitura = LocalDateTime.now();
+    }
 }

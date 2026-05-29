@@ -94,4 +94,11 @@ public class Anomalia {
     public String toString(){
         return tipoAnomalia + " de importancia " + severidade + ", descrição: " + descricao;
     }
+
+    //metodos
+    public void adicionarResolucao(String novaResolucao) {
+
+        descricaoResolucao = novaResolucao;
+        status = "resolvida";
+    }
 }
