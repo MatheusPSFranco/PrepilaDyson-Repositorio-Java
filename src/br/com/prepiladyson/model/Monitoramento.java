@@ -6,10 +6,10 @@ public class Monitoramento {
 
     private int idMonitoramento;
     private LocalDateTime dataHoraColeta;
-    private double energiaCaptada;
-    private double energiaTransmitida;
-    private double energiaRecebida;
-    private double eficiencia_percentual;
+    private double energiaCaptada; //Energia Gerada pelo satelite
+    private double energiaTransmitida; //Energia Enviada
+    private double energiaRecebida; //Energia que chegou
+    private double eficienciaPercentual;
     private String status;
     private String observacao;
     private OperacaoSBSP operacaoSBSP;
@@ -67,12 +67,12 @@ public class Monitoramento {
         this.energiaRecebida = energiaRecebida;
     }
 
-    public double getEficiencia_percentual() {
-        return eficiencia_percentual;
+    public double geteficienciaPercentual() {
+        return eficienciaPercentual;
     }
 
-    public void setEficiencia_percentual(double eficiencia_percentual) {
-        this.eficiencia_percentual = eficiencia_percentual;
+    public void seteficienciaPercentual(double eficienciaPercentual) {
+        this.eficienciaPercentual = eficienciaPercentual;
     }
 
     public String getStatus() {
@@ -102,15 +102,15 @@ public class Monitoramento {
     //toString()
     @Override
     public String toString(){
-        return "Energia captada: " + energiaCaptada + ", energia transmitida: " + energiaTransmitida;
+        return "Energia captada: " + energiaCaptada + ", energia transmitida: " + energiaTransmitida + ", energia Recebida: " + energiaRecebida;
     }
 
     //metodos
     public double calcularPerdaEnergetica() {
-        return energiaCaptada - energiaTransmitida;
+        return energiaCaptada - energiaRecebida;
     }
 
-    public double calcularTaxaEficiencia() {
-        return (energiaTransmitida * 100) / energiaCaptada;
-    }
-}
+    public void calcularEficienciaPercentual() {
+
+        eficienciaPercentual = (energiaRecebida / energiaCaptada) * 100;
+    }}

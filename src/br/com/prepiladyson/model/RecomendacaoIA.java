@@ -2,7 +2,7 @@ package br.com.prepiladyson.model;
 
 import java.time.LocalDateTime;
 
-public class RecomentacaoIA {
+public class RecomendacaoIA {
 
     private int idRecomendacao;
     private LocalDateTime dataHoraGeracao;
@@ -14,7 +14,7 @@ public class RecomentacaoIA {
     private Anomalia anomalia;
 
     //Construtores
-    public RecomentacaoIA(int idRecomendacao, LocalDateTime dataHoraGeracao, String recomendacao, String status, OperacaoSBSP operacaoSBSP, Anomalia anomalia) {
+    public RecomendacaoIA(int idRecomendacao, LocalDateTime dataHoraGeracao, String recomendacao, String status, OperacaoSBSP operacaoSBSP, Anomalia anomalia) {
         this.idRecomendacao = idRecomendacao;
         this.dataHoraGeracao = dataHoraGeracao;
         this.recomendacao = recomendacao;

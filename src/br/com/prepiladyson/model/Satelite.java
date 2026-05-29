@@ -113,7 +113,7 @@ public class Satelite {
     //toString()
     @Override
     public String toString(){
-        return "Satelite " + nome + " codigo " + codigoSatelite;
+        return "Satelite " + nome + " codigo " + codigoSatelite + " está " + status;
     }
 
     //metodos

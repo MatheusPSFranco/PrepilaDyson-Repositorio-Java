@@ -41,6 +41,6 @@ public class RelatorioOperacao {
     //toString()
     @Override
     public String toString(){
-        return relatorioAnalitico.getTitulo() + " da operação " + operacaoSBSP;
+        return relatorioAnalitico.getTitulo() + " da operação " + operacaoSBSP.getNomeOperacao();
     }
 }

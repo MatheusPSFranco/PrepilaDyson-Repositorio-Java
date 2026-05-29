@@ -33,7 +33,7 @@ public class Terminal {
         //Instanciando Satelite
         Satelite satelite = new Satelite(idSatelite, nomeSatelite, codigoSatelite, statusSatelite, dataLancamento, observacaoSatelite, altitudeOrbital, fabricante, dataCadastroSatelite, organizacao);
 
-        //Usuario
+        //Usuario 1
         int idUsuario = 1;
         String nomeCompleto = "Matheus Pereira Da Silva Franco";
         String email = "matheuspsilvafranco@gmail.com";
@@ -44,6 +44,19 @@ public class Terminal {
 
         //Instanciando Usuario
         Usuario usuario = new Usuario(idUsuario, nomeCompleto, email, senha, perfilAcesso, dataCadastroUsuario, statusUsuario, organizacao);
+
+        //Usuario 2
+        int idUsuario2 = 2;
+        String nomeCompleto2 = "Thiago Toshiyuki Izumi Yamamoto";
+        String email2 = "thiagoyamamoto@gmail.com";
+        String senha2 = "123456789@";
+        String perfilAcesso2 = "administrador";
+        LocalDateTime dataCadastroUsuario2 = LocalDateTime.now();
+        String statusUsuario2 = "ativo";
+
+        //Instanciando Usuario
+        Usuario usuario2 = new Usuario(idUsuario2, nomeCompleto2, email2, senha2, perfilAcesso2, dataCadastroUsuario2, statusUsuario2, organizacao);
+
 
         //Contrato
         int idContrato = 1;
@@ -103,7 +116,7 @@ public class Terminal {
         //Monitoramento
         int idMonitoramento = 1;
         LocalDateTime dataHoraColeta = LocalDateTime.now();
-        double energiaCaptada = 100000;
+        double energiaCaptada = 120000;
         double energiaTransmitida = 120000;
         double energiaRecebida = 100000;
         String statusMonitoramento = "ativo";
@@ -139,14 +152,14 @@ public class Terminal {
         //Instanciando EstacaoOperacao
         EstacaoOperacao estacaoOperacao = new EstacaoOperacao(idEstacaoOperacao, estacaoReceptora, operacaoSBSP, dataVinculoEstacaoOperacao, statusVinculo);
 
-        //RecomentacaoIA
+        //recomendacaoIA
         int idRecomendacao = 1;
         LocalDateTime dataHoraGeracao = LocalDateTime.now();
         String recomendacao = "Verificar se envio e coleta de energia está correto";
-        String statusRecomentacaoIA = "pendente";
+        String statusrecomendacaoIA = "pendente";
 
-        //Instanciando RecomentacaoIA
-        RecomentacaoIA recomentacaoIA = new RecomentacaoIA(idRecomendacao, dataHoraGeracao, recomendacao, statusRecomentacaoIA, operacaoSBSP, anomalia);
+        //Instanciando recomendacaoIA
+        RecomendacaoIA recomendacaoIA = new RecomendacaoIA(idRecomendacao, dataHoraGeracao, recomendacao, statusrecomendacaoIA, operacaoSBSP, anomalia);
 
         //MonitoramentoRecomendacao
         int idMonitoramentoRecomendacao = 1;
@@ -154,7 +167,7 @@ public class Terminal {
         String origemAnalise = "perda de 20000 de energia";
 
         //Instanciando MonitoramentoRecomendacao
-        MonitoramentoRecomendacao monitoramentoRecomendacao = new MonitoramentoRecomendacao(idMonitoramentoRecomendacao, monitoramento, recomentacaoIA, dataVinculoMonitoramentoRecomendacao, origemAnalise);
+        MonitoramentoRecomendacao monitoramentoRecomendacao = new MonitoramentoRecomendacao(idMonitoramentoRecomendacao, monitoramento, recomendacaoIA, dataVinculoMonitoramentoRecomendacao, origemAnalise);
 
         //Alerta
         int idAlerta = 1;
@@ -164,6 +177,127 @@ public class Terminal {
 
         //Instanciando Alerta
         Alerta alerta = new Alerta(idAlerta, dataHoraGeracaoAlerta, prioridade, statusAlerta, anomalia, usuario);
+
+
+        //----------------------------Saidas---------------------------------
+
+        //Organizacao
+        System.out.println("Organizacao");
+        System.out.println(organizacao);
+
+        System.out.println(" ");
+
+        //Satelite
+        System.out.println("Satelite");
+        System.out.println(satelite);
+        satelite.entrarManutencao();
+        System.out.println("Depois:\n" + satelite);
+
+        System.out.println(" ");
+
+        //Usuario
+        System.out.println("Usuario");
+        System.out.println(usuario);
+        usuario.alterarPerfilAcesso("gerente");
+        System.out.println("Depois:\n" + usuario);
+        System.out.println("Senha: " + usuario.getSenha());
+        usuario.redefinirSenha("@987654321");
+        System.out.println("Nova senha: " + usuario.getSenha());
+
+        System.out.println(" ");
+
+        //Contrato
+        System.out.println("Contrato");
+        System.out.println(contrato);
+        System.out.println("Data fim do Contrato: " +contrato.getDataFim());
+        contrato.renovarContrato(LocalDateTime.of(2026, 7, 1, 0,0));
+        System.out.println("Nova data fim do Contrato: " +contrato.getDataFim());
+
+        System.out.println(" ");
+
+        //EstacaoReceptora
+        System.out.println("EstacaoReceptora");
+        System.out.println(estacaoReceptora);
+
+        System.out.println(" ");
+
+        //OperacaoSBSP
+        System.out.println("OperacaoSBSP");
+        System.out.println(operacaoSBSP);
+        System.out.println("Antes dos metodos " + operacaoSBSP.getStatus() + " Inicio: " + operacaoSBSP.getDataInicioReal() + " Fim: " + operacaoSBSP.getDataFimReal());
+        operacaoSBSP.iniciarOperacao();
+        System.out.println("Depois do primeiro metodos " + operacaoSBSP.getStatus() + " Inicio: " + operacaoSBSP.getDataInicioReal() + " Fim: " + operacaoSBSP.getDataFimReal());
+        operacaoSBSP.finalizarOperacao();
+        System.out.println("Depois dos metodos " + operacaoSBSP.getStatus() + " Inicio: " + operacaoSBSP.getDataInicioReal() + " Fim: " + operacaoSBSP.getDataFimReal());
+
+        System.out.println(" ");
+
+        //RelatorioAnalitico
+        System.out.println("RelatorioAnalitico");
+        System.out.println(relatorioAnalitico);
+
+        System.out.println(" ");
+
+        //RelatorioOperacao
+        System.out.println("RelatorioOperacao");
+        System.out.println(relatorioOperacao);
+
+        System.out.println(" ");
+
+        //Monitoramento
+        System.out.println("Monitoramento");
+        System.out.println(monitoramento);
+        System.out.println("Perda Energetica: " + monitoramento.calcularPerdaEnergetica());
+        monitoramento.calcularEficienciaPercentual();
+        System.out.println("Percentual: " + monitoramento.geteficienciaPercentual());
+
+        System.out.println(" ");
+
+        //Anomalia
+        System.out.println("Anomalia");
+        System.out.println(anomalia);
+        System.out.println("Descrição da resolução: " +anomalia.getDescricaoResolucao() + ", Status: " + anomalia.getStatus());
+        anomalia.adicionarResolucao("Demonstração");
+        System.out.println("Descrição da resolução: " +anomalia.getDescricaoResolucao() + ", Status: " + anomalia.getStatus());
+
+        System.out.println(" ");
+
+        //SateliteOperacao
+        System.out.println("SateliteOperacao");
+        System.out.println(sateliteOperacao);
+
+        System.out.println(" ");
+
+        //EstacaoOperacao
+        System.out.println("EstacaoOperacao");
+        System.out.println(estacaoOperacao);
+
+        System.out.println(" ");
+
+        //recomendacaoIA
+        System.out.println("recomendacaoIA");
+        System.out.println(recomendacaoIA);
+        System.out.println("Justificativa de Descarte: " + recomendacaoIA.getjustificativaDescarte() + ", Data de Alteração: " + recomendacaoIA.getDataHoraAlteracao());
+        recomendacaoIA.adicionarJustificativaDescarte("Demonstração");
+        System.out.println("Justificativa de Descarte: " + recomendacaoIA.getjustificativaDescarte() + ", Data de Alteração: " + recomendacaoIA.getDataHoraAlteracao());
+
+        System.out.println(" ");
+
+        //MonitoramentoRecomendacao
+        System.out.println("MonitoramentoRecomendacao");
+        System.out.println(monitoramentoRecomendacao);
+
+        System.out.println(" ");
+
+        //Alerta
+        System.out.println("Alerta");
+        System.out.println(alerta);
+        System.out.println("Alerta enviado para " + alerta.getUsuario().getNomeCompleto());
+        alerta.direcionarUsuario(usuario2);
+        System.out.println("Alerta enviado para " + alerta.getUsuario().getNomeCompleto());
+        System.out.println("Data que foi lido o alerta: " + alerta.getDataHoraLeitura());
+        alerta.registrarLeitura();
+        System.out.println("Data que foi lido o alerta: " + alerta.getDataHoraLeitura());
 
     }
 }

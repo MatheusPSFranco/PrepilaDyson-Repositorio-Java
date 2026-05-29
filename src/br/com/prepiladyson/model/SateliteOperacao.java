@@ -63,6 +63,6 @@ public class SateliteOperacao {
     //toString()
     @Override
     public String toString(){
-        return "Satelite " + satelite + " participa da operação " + operacaoSBSP;
+        return "Satelite " + satelite.getNome() + " participa da operação " + operacaoSBSP.getNomeOperacao();
     }
 }

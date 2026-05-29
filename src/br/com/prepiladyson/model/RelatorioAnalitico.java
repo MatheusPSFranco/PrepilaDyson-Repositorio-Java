@@ -123,6 +123,6 @@ public class RelatorioAnalitico {
     //toString()
     @Override
     public String toString(){
-        return titulo + " " + conteudo;
+        return titulo + ", " + conteudo;
     }
 }

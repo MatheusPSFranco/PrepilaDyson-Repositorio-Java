@@ -6,15 +6,15 @@ public class MonitoramentoRecomendacao {
 
     private int idMonitoramentoRecomendacao;
     private Monitoramento monitoramento;
-    private RecomentacaoIA recomentacaoIA;
+    private RecomendacaoIA recomendacaoIA;
     private LocalDateTime dataVinculo;
     private String origemAnalise;
 
     //Construtores
-    public MonitoramentoRecomendacao(int idMonitoramentoRecomendacao, Monitoramento monitoramento, RecomentacaoIA recomentacaoIA, LocalDateTime dataVinculo, String origemAnalise) {
+    public MonitoramentoRecomendacao(int idMonitoramentoRecomendacao, Monitoramento monitoramento, RecomendacaoIA recomendacaoIA, LocalDateTime dataVinculo, String origemAnalise) {
         this.idMonitoramentoRecomendacao = idMonitoramentoRecomendacao;
         this.monitoramento = monitoramento;
-        this.recomentacaoIA = recomentacaoIA;
+        this.recomendacaoIA = recomendacaoIA;
         this.dataVinculo = dataVinculo;
         this.origemAnalise = origemAnalise;
     }
@@ -36,12 +36,12 @@ public class MonitoramentoRecomendacao {
         this.monitoramento = monitoramento;
     }
 
-    public RecomentacaoIA getRecomentacaoIA() {
-        return recomentacaoIA;
+    public RecomendacaoIA getRecomentacaoIA() {
+        return recomendacaoIA;
     }
 
-    public void setRecomentacaoIA(RecomentacaoIA recomentacaoIA) {
-        this.recomentacaoIA = recomentacaoIA;
+    public void setRecomentacaoIA(RecomendacaoIA recomendacaoIA) {
+        this.recomendacaoIA = recomendacaoIA;
     }
 
     public LocalDateTime getDataVinculo() {
@@ -63,6 +63,6 @@ public class MonitoramentoRecomendacao {
     //toString()
     @Override
     public String toString(){
-        return "Monitoramento "+monitoramento.getidMonitoramento() + " recomendou o uso da IA em " + recomentacaoIA.getRecomendacao();
+        return "Monitoramento "+monitoramento.getidMonitoramento() + " recomendou o uso da IA em " + recomendacaoIA.getRecomendacao();
     }
 }
